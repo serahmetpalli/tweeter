@@ -23,6 +23,10 @@ module.exports = function(DataHelpers) {
       return;
     }
 
+    const newTweet = req.body.text;
+    console.log(newTweet); 
+    console.log("newTweet");
+
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,

@@ -29,6 +29,19 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
+
+// Specify the correct action and method attributes to the form so that it submits to the correct endpoint/route in your Express app (POST /tweets/).
+app.get("/tweets", (req, res) => {
+  res.send("Hello!");
+});
+
+// app.post("/",(req,res) => {
+//   const newTweet = req.body.text;
+//   console.log(newTweet); 
+//   console.log("newTweet");
+//   res.redirect("/tweets");
+// });
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });

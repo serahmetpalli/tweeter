@@ -1,0 +1,32 @@
+main{
+  margin: 0 auto;  
+}
+
+.counter{
+  float: right;
+  font-family: 'Bungee', 'sans-serif';
+}
+
+.submit{
+  font-family: 'Bungee', 'sans-serif';
+  color: white;
+  background-color: #4056a1;
+}
+
+label {
+  resize: none;
+}
+
+.new-tweet  {
+  color:#545149;
+}
+#tweet-text {
+  width:30%;
+  background-color: transparent;
+  color: black;
+  outline: 0;
+  border-color: black;
+  border:none;
+  border-bottom: 2px solid;
+  
+}
