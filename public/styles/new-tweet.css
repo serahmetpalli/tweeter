@@ -1,16 +1,40 @@
+span {
+  font-size: 50px;
+}
+
+.name {
+  font-size: 30px;
+  color: white;
+}
+
+.tweet1 {
+  font-weight: normal;
+}
+
 main{
   margin: 0 auto;  
 }
 
+nav{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+body{
+  padding-top: 120px;
+}
 .counter{
   float: right;
   font-family: 'Bungee', 'sans-serif';
+  margin-top:20px;
 }
 
 .submit{
   font-family: 'Bungee', 'sans-serif';
   color: white;
   background-color: #4056a1;
+  margin-top:20px;
 }
 
 label {
@@ -19,14 +43,102 @@ label {
 
 .new-tweet  {
   color:#545149;
+  font-size: 20px;
 }
 #tweet-text {
-  width:30%;
+  width:100%;
   background-color: transparent;
   color: black;
   outline: 0;
   border-color: black;
   border:none;
-  border-bottom: 2px solid;
+  border-bottom: 5px solid gray;
+  resize: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+article {
+  /* border: 5px solid gray; */
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 30px;
+  color: black;
+  font-style: normal;
   
 }
+
+/* article:hover{
+text-shadow:2px 2px gray;
+box-shadow: 5px 5px gray;
+} */
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweeter-name {
+  margin-right: auto;
+  font-size: 30px;
+  font-style: bold;
+  padding-left: 50px;
+}
+
+.tweeter-name:hover{
+  color:black;
+}
+
+.tweeter-icon {
+  height: 100px;
+  opacity: .75px;
+}
+
+.tweet-footer {
+  border-top: 5px solid gray;
+  display:flex;
+  font-size:20px
+}
+
+
+.tweet:hover {
+  box-shadow: 5px 5px gray;
+  text-shadow: 2px 2px gray;
+}
+
+.days-ago {
+  margin-right: auto;
+  margin-left: 10px;
+  
+}
+
+.tweets-container .handle:hover{
+  color:#bfbfbf;  
+}
+
+.tweet {
+  font-size: 20px;
+  color: black;
+  border: 5px solid gray;
+  margin: 10px;
+}
+
+.tweet .tweeter-icon {
+  opacity: .5;
+}
+
+.tweet .tweeter-icon:hover{
+  opacity: 1;
+}
+
+.handle{
+  font-size:30px;
+  color: #f4f1ec;
+  margin-right: 20px;
+}
+
+.small-icons i {
+  margin-left: 10px;
+}
+
+
