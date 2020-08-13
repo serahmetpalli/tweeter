@@ -7,10 +7,6 @@ span {
   color: white;
 }
 
-.tweet1 {
-  font-weight: normal;
-}
-
 main{
   margin: 0 auto;  
 }
@@ -116,11 +112,17 @@ box-shadow: 5px 5px gray;
   color:#bfbfbf;  
 }
 
+.tweet1 {
+  font-weight: normal;
+  max-width: 90%;
+}
+
 .tweet {
   font-size: 20px;
   color: black;
   border: 5px solid gray;
   margin: 10px;
+  /* the text needs to shrink accoring to windows size -- add that condition here? */
 }
 
 .tweet .tweeter-icon {
@@ -139,6 +141,18 @@ box-shadow: 5px 5px gray;
 
 .small-icons i {
   margin-left: 10px;
+}
+
+#error { 
+  transition: all .5s ease-in-out;
+  background: crimson !important;
+  color:white;
+  padding: 10px !important;
+  border-radius: 0 !important;
+  position: relative; 
+  display: inline-block !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px;
 }
 
 

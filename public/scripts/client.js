@@ -47,7 +47,9 @@ const createTweetElement = function (tweet) {
   const today = timeNow.getTime();
 
   const timeGap = ((today - tweet.created_at)/1000/60).toFixed(0);
-  
+  const text = $("<div>").text(tweet.content.text).html();
+
+
   let $tweet = $(`<div class = "tweet">
   <div class="tweet-header">
     <img src="${tweet.user.avatars}" class="tweeter-icon"> 
@@ -55,7 +57,7 @@ const createTweetElement = function (tweet) {
     <p class="handle"> ${tweet.user.handle} </p>
   </div>
 
-  <h2 class = "tweet1">${tweet.content.text}</h2>
+  <h2 class = "tweet1">${text}</h2>
   <div class="tweet-footer">
     <p class="days-ago"> ${timeGap} minute(s) ago </p>
     <p class="small-icons"> <i class="fa fa-flag"></i> <i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p>
@@ -63,14 +65,14 @@ const createTweetElement = function (tweet) {
 
   </div>`);
   return $tweet;
-}
+} 
 
 const renderTweets = function (tweets) {
   $('.tweets-container').empty();
   for (tweet of tweets) {// loops through tweets
     const tweetElement = createTweetElement(tweet); // calls createTweetElement for each tweet
     console.log(tweetElement);
-    $('.tweets-container').append(tweetElement);// takes return value and appends it to the tweets container
+    $('.tweets-container').prepend(tweetElement);// takes return value and appends it to the tweets container
   }
 
 }

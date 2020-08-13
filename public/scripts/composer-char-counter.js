@@ -5,27 +5,47 @@ $(document).ready(function () {
   // Step two: Add event listener
   // Step three: Retarget (optional)
   // Step four: effect
+  const renderError = function (message) {
+    $('#error').remove();
+    //create the new element 
+    let error = $(`<div id="error"> ${message} </div>`);
+    //append to new tweet 
+    $('.new-tweet').prepend(error);
+    $('error').slidedown("slow");//animations;
+  } 
+
+
   $('#tweet-text').keyup(function () {
     let text = $(this).val();
+    console.log(text)
     let output = $('.counter');
     output.val(140 - text.length);
     // console.log(output.val());
+  
+   if (output.val() < 0) {
+    output.css('color', 'red')
+    renderError(  "Message exceeded character length of 140 characters.") ;
+    console.log($('#submit-btn'));
+    $('#submit-btn').prop('disabled', true);//disable it 
+    } else {
+    output.css('color', 'black');
+    $('#error').remove();
+    $('#submit-btn').prop('disabled', false);//enable it so it can submit
+   } 
 
-    (output.val() < 0) ? output.css('color', 'red') : output.css('color', 'black');
-
+    // $("<div>").text(textFromUser);
     //disallow submission if the tweet is empty. 
-    if ($('#tweet-text').val().length > 140) {
-      alert("Message exceeded character length of 140 characters.");
-    } else if ($('#tweet-text').val() === "") {
-      alert("Input field cannot be blank.");
-    } 
   })
-
+  
   $('#submit-btn').click(function (){
     if ($('#tweet-text').val() === "") {
-      alert("Input field cannot be blank.");
-      return;
-    }
+      renderError("Input field cannot be blank.");
+      // alert("Input field cannot be blank.");
+      
+    } else if ($('#tweet-text').val().length > 140) {
+      renderError(  "Message exceeded character length of 140 characters.") 
+      // alert("Message exceeded character length of 140 characters.");
+    } 
   })
 
   $('.tweet').mouseenter(function () {
