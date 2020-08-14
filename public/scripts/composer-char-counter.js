@@ -33,11 +33,10 @@ $(document).ready(function () {
     $('#submit-btn').prop('disabled', false);//enable it so it can submit
    } 
 
-    // $("<div>").text(textFromUser);
-    //disallow submission if the tweet is empty. 
   })
   
   $('#submit-btn').click(function (){
+    $('.counter').val(140);
     if ($('#tweet-text').val() === "") {
       renderError("Input field cannot be blank.");
       // alert("Input field cannot be blank.");

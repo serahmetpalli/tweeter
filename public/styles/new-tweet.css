@@ -3,13 +3,14 @@ span {
 }
 
 .name {
-  font-size: 30px;
+  font-size: 50px;
   color: white;
 }
 
 main{
   margin: 0 auto;  
 }
+
 
 nav{
   position: fixed;
@@ -41,6 +42,7 @@ label {
   color:#545149;
   font-size: 20px;
 }
+
 #tweet-text {
   width:100%;
   background-color: transparent;
@@ -48,15 +50,19 @@ label {
   outline: 0;
   border-color: black;
   border:none;
-  border-bottom: 5px solid gray;
+  border-bottom: 2px solid gray;
   resize: none;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: regular;
+  margin-left:5px;
+  margin-right: 10px;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  /* text-align: left; */
 }
 
 article {
   /* border: 5px solid gray; */
-  margin-top: 20px;
+  margin: 100px;
   padding: 10px;
   font-size: 30px;
   color: black;
@@ -72,6 +78,7 @@ box-shadow: 5px 5px gray;
 .tweet-header {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .tweeter-name {
@@ -91,7 +98,9 @@ box-shadow: 5px 5px gray;
 }
 
 .tweet-footer {
-  border-top: 5px solid gray;
+  border-top: 2px solid gray;
+  width:95%;
+  margin:auto;
   display:flex;
   font-size:20px
 }
@@ -114,14 +123,14 @@ box-shadow: 5px 5px gray;
 
 .tweet1 {
   font-weight: normal;
-  max-width: 90%;
 }
 
 .tweet {
   font-size: 20px;
   color: black;
-  border: 5px solid gray;
+  border: 2px solid gray;
   margin: 10px;
+  word-wrap: break-word;
   /* the text needs to shrink accoring to windows size -- add that condition here? */
 }
 
@@ -154,5 +163,38 @@ box-shadow: 5px 5px gray;
   box-shadow: 1px 1px 1px #aaaaaa;
   margin-top: 10px;
 }
+
+
+
+/*mobile first - you need one media query*/
+
+@media screen and (min-width: 64em) {
+  .flex-container {
+    display: flex;
+    box-sizing: border-box;
+    margin: 11em 1em;
+   
+   }
+
+   .new-tweet h2 {
+    margin-top: 0;
+  }
+
+  .header {
+    margin: 15em 10em 10em;
+    width: 50em;
+    
+  }
+
+  .avatar {
+    margin: 0 10em;
+  }
+ 
+}
+
+
+
+
+
 
 

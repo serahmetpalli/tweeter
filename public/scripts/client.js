@@ -43,9 +43,7 @@ const data = [
 
 const createTweetElement = function (tweet) {
   const timeNow = new Date();
-  
   const today = timeNow.getTime();
-
   const timeGap = ((today - tweet.created_at)/1000/60).toFixed(0);
   const text = $("<div>").text(tweet.content.text).html();
 
@@ -101,3 +99,13 @@ const loadTweets = function () {
     renderTweets(tweets);
   })
 }
+
+//handling the double angled arrows
+
+//hide the text input area
+//when red arrow is clicked, the input area shows up
+$('.angled-arrow').click(function(){
+  $( "#tweet-text" ).slideToggle( "slow")
+})
+
+
