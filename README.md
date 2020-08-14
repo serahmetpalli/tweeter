@@ -13,8 +13,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["Full Tweeter Page"](https://github.com/serahmetpalli/tweeter/blob/master/docs/Full%20Tweeter%20Page.png)
+!["Mobile Version"](https://github.com/serahmetpalli/tweeter/blob/master/docs/Mobile%20version%20.png)
 
 ## Dependencies
 
