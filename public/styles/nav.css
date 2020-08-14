@@ -6,7 +6,7 @@ nav {
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   height: 120px;
   text-align: left;
-  padding: 1.5em;
+  padding: 2em;
   justify-content: space-between;
 }
 
@@ -17,7 +17,6 @@ nav {
 
 nav span {
   display: inline-block;
-  
 }
 
 .new-tweet-button {

@@ -21,6 +21,7 @@ nav{
 body{
   padding-top: 120px;
 }
+
 .counter{
   float: right;
   font-family: 'Bungee', 'sans-serif';
@@ -102,9 +103,9 @@ box-shadow: 5px 5px gray;
   color:black;
 }
 
-.tweeter-icon {
+.tweet .tweeter-icon {
   height: 100px;
-  opacity: .75px;
+  opacity: .5;
 }
 
 .tweet-footer {
@@ -119,6 +120,10 @@ box-shadow: 5px 5px gray;
 .tweet:hover {
   box-shadow: 5px 5px gray;
   text-shadow: 2px 2px gray;
+}
+
+.tweet:hover .tweeter-icon{
+  opacity:1;
 }
 
 .days-ago {
@@ -141,15 +146,7 @@ box-shadow: 5px 5px gray;
   border: 2px solid gray;
   margin: 10px;
   word-wrap: break-word;
-  /* the text needs to shrink accoring to windows size -- add that condition here? */
-}
-
-.tweet .tweeter-icon {
-  opacity: .5;
-}
-
-.tweet .tweeter-icon:hover{
-  opacity: 1;
+  margin-bottom: 100px;
 }
 
 .handle{
@@ -160,6 +157,7 @@ box-shadow: 5px 5px gray;
 
 .small-icons i {
   margin-left: 10px;
+  color:#4056a1;
 }
 
 #error { 
@@ -172,6 +170,10 @@ box-shadow: 5px 5px gray;
   display: inline-block !important;
   box-shadow: 1px 1px 1px #aaaaaa;
   margin-top: 10px;
+}
+
+.flex-container {
+  width:90%;
 }
 
 
@@ -199,12 +201,4 @@ box-shadow: 5px 5px gray;
   .avatar {
     margin: 0 10em;
   }
- 
 }
-
-
-
-
-
-
-

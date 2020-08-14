@@ -1,3 +1,26 @@
+$(document).ready(function () {
+  // renderTweets(data)
+  loadTweets();
+
+  $('form').submit(function (event) {
+    event.preventDefault(); //prevents the default submit behavior
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $(this).serialize() //turns form data into query string
+    }).then(function () {
+      loadTweets(); 
+      $('#tweet-text').val('');
+      console.log();
+    })
+  })
+
+  $('.angled-arrow').click(function(){
+    $( ".btn-and-input" ).slideToggle( "slow")
+  })
+
+});
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -42,9 +65,6 @@ const data = [
 ]
 
 const createTweetElement = function (tweet) {
-  const timeNow = new Date();
-  const today = timeNow.getTime();
-  const timeGap = ((today - tweet.created_at)/1000/60).toFixed(0);
   const text = $("<div>").text(tweet.content.text).html();
 
 
@@ -57,7 +77,7 @@ const createTweetElement = function (tweet) {
 
   <h2 class = "tweet1">${text}</h2>
   <div class="tweet-footer">
-    <p class="days-ago"> ${timeGap} minute(s) ago </p>
+    <p class="days-ago"> ${moment(tweet.created_at).toNow(true)} ago </p>
     <p class="small-icons"> <i class="fa fa-flag"></i> <i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p>
   </div>
 
@@ -75,40 +95,12 @@ const renderTweets = function (tweets) {
 
 }
 
-$(document).ready(function () {
-  // renderTweets(data)
-  loadTweets();
-
-  $('form').submit(function (event) {
-    event.preventDefault(); //prevents the default submit behavior
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: $(this).serialize() //turns form data into query string
-    }).then(function () {
-      loadTweets(); 
-      $('#tweet-text').val('');
-      console.log();
-    })
-  })
-
-  $('.angled-arrow').click(function(){
-    $( ".btn-and-input" ).slideToggle( "slow")
-    // $( "#submit-btn" ).slideToggle( "slow")
-  })
-
-});
-
 const loadTweets = function () {
   $.get("/tweets", function (tweets) {
     renderTweets(tweets);
   })
 }
 
-//handling the double angled arrows
-
-//hide the text input area
-//when red arrow is clicked, the input area shows up
 
 
 

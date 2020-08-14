@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/styles/nav.css">
@@ -27,6 +28,7 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="scripts/composer-char-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -36,7 +38,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    
+
     <span>
       <span class="new-tweet-button">
         <div> <b>Write</b> a new tweet</div>
@@ -66,13 +68,13 @@
         <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets" method="post">
           <!-- <label for="tweet-text">What are you humming about?</label>  -->
-          <div class = "btn-and-input">
+          <div class="btn-and-input">
             <label class="question">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" ></textarea>
-          <div>
-            <button id="submit-btn" type="submit" class="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button id="submit-btn" type="submit" class="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
           </div>
         </form>
 
