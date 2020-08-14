@@ -28,6 +28,7 @@ body{
 }
 
 .submit{
+  /* display:none; */
   font-family: 'Bungee', 'sans-serif';
   color: white;
   background-color: #4056a1;
@@ -43,7 +44,12 @@ label {
   font-size: 20px;
 }
 
+.question {
+  font-size: 30px;
+}
+
 #tweet-text {
+  /* display:none; */
   width:100%;
   background-color: transparent;
   color: black;
@@ -68,6 +74,10 @@ article {
   color: black;
   font-style: normal;
   
+}
+
+.btn-and-input {
+  display:none;
 }
 
 /* article:hover{

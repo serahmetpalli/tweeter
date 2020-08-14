@@ -92,6 +92,11 @@ $(document).ready(function () {
     })
   })
 
+  $('.angled-arrow').click(function(){
+    $( ".btn-and-input" ).slideToggle( "slow")
+    // $( "#submit-btn" ).slideToggle( "slow")
+  })
+
 });
 
 const loadTweets = function () {
@@ -104,8 +109,6 @@ const loadTweets = function () {
 
 //hide the text input area
 //when red arrow is clicked, the input area shows up
-$('.angled-arrow').click(function(){
-  $( "#tweet-text" ).slideToggle( "slow")
-})
+
 
 
