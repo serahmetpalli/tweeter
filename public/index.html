@@ -4,100 +4,97 @@
 <head>
 
 
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap"
-    rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="/styles/nav.css">
-  <link rel="stylesheet" type="text/css" href="/styles/header.css">
-  <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
 
-  <!-- External JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="scripts/composer-char-counter.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/composer-char-counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
 </head>
 
 <body>
-  <!-- Top nav bar (fixed) -->
-  <nav>
-    <span>tweeter</span>
+    <!-- Top nav bar (fixed) -->
+    <nav>
+        <span>tweeter</span>
 
-    <span>
+        <span>
       <span class="new-tweet-button">
         <div> <b>Write</b> a new tweet</div>
         <div class="angled-arrow">
           <a href=""> </a><i class="fa fa-angle-double-down"></i></a>
         </div>
       </span>
-    </span>
-  </nav>
+        </span>
+    </nav>
 
 
 
-  <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content here -->
 
-  <div class="flex-container">
-    <header class="header">
-      <div class="avatar">
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div class="name">
-        <p><b>Serah</b> Metpalli</p>
-      </div>
-    </header>
-    <main class="container">
-      <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-        <form action="/tweets" method="post">
-          <!-- <label for="tweet-text">What are you humming about?</label>  -->
-          <div class="btn-and-input">
-            <label class="question">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-            <div>
-              <button id="submit-btn" type="submit" class="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+    <div class="flex-container">
+        <header class="header">
+            <div class="avatar">
+                <img src="/images/profile-hex.png">
             </div>
-          </div>
-        </form>
+            <br>
+            <div class="name">
+                <p><b>Serah</b> Metpalli</p>
+            </div>
+        </header>
+        <main class="container">
+            <section class="new-tweet">
+                <!-- <h2>Compose Tweet</h2> -->
+                <form action="/tweets" method="post">
+                    <!-- <label for="tweet-text">What are you humming about?</label>  -->
+                    <div class="btn-and-input">
+                        <label class="question">What are you humming about?</label>
+                        <textarea name="text" id="tweet-text"></textarea>
+                        <div>
+                            <button id="submit-btn" type="submit" class="submit">Tweet</button>
+                            <output name="counter" class="counter" for="tweet-text">140</output>
+                        </div>
+                    </div>
+                </form>
 
-        <article class="tweets-container">
+                <article class="tweets-container">
 
-          <!-- <div class = "tweet">
-  <div class="tweet-header">
-    <img src="https://i.imgur.com/nlhLi3I.png" class="tweeter-icon"> 
-    <p class="tweeter-name"> Rhoda Jacobs </p>
-    <p class="handle"> @Mrs.Jacobs</p>
-  </div>
+                    <!-- <div class = "tweet">
+<div class="tweet-header">
+<img src="https://i.imgur.com/nlhLi3I.png" class="tweeter-icon"> 
+<p class="tweeter-name"> Rhoda Jacobs </p>
+<p class="handle"> @Mrs.Jacobs</p>
+</div>
 
-  <h2 class = "tweet1">The mind is the reality. You are what you think.</h2>
-  <div class="tweet-footer">
-    <p class="days-ago"> 10 days ago</p>
-    <p class="small-icons"> <i class="fa fa-flag"></i> <i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p>
-  </div>s
+<h2 class = "tweet1">The mind is the reality. You are what you think.</h2>
+<div class="tweet-footer">
+<p class="days-ago"> 10 days ago</p>
+<p class="small-icons"> <i class="fa fa-flag"></i> <i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p>
+</div>s
 
 </div> -->
-        </article>
+                </article>
 
-      </section>
-    </main>
+            </section>
+        </main>
 
 </body>
 
