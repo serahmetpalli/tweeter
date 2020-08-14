@@ -6,7 +6,7 @@ $(document).ready(function() {
         let error = $(`<div id="error"> ${message} </div>`);
         //append to new tweet 
         $('.new-tweet').prepend(error);
-        $('error').slidedown("slow"); //animations;
+        $('#error').slideDown("slow"); //animations;
     }
 
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
         if (output.val() < 0) {
             output.css('color', 'red')
             renderError("Message exceeded character length of 140 characters.");
-            console.log($('#submit-btn'));
+            console.log($('#submit-btn')[0]);
             $('#submit-btn').prop('disabled', true); //disable it 
         } else {
             output.css('color', 'black');
